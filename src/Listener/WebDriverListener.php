@@ -72,7 +72,7 @@ class WebDriverListener extends \PHPUnit_Framework_BaseTestListener
             $this->setupCustomCapabilities($capabilities, $config->browserName),
             $connectTimeoutMs = 2*60*1000,
             // How long could request to Selenium take (eg. how long could we wait in hub's queue to available node)
-            $requestTimeoutMs = 60*60*1000 // 1 hour (same as timeout for the whole process)
+            $requestTimeoutMs = 3*60*1000 // -1 hour- 3 minutes (same as timeout for the whole process)
         );
     }
 

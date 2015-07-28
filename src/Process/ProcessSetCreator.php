@@ -183,7 +183,7 @@ class ProcessSetCreator
             ->setEnv('DEBUG', $this->output->isDebug() ? '1' : '0')
             ->setPrefix(STEWARD_BASE_DIR . '/vendor/bin/phpunit')
             ->setArguments(array_merge($processEvent->getArgs(), [$fileName]))
-            ->setTimeout(3600) // 1 hour timeout to end possibly stuck processes
+            ->setTimeout(300) // -1 hour- 3 minutes timeout to end possibly stuck processes
             ->getProcess();
 
         return $process;
